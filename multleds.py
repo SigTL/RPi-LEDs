@@ -12,7 +12,7 @@ GPIO.setup(22, GPIO.OUT)
 GPIO.setup(23, GPIO.OUT)
 
 # loop 50 times
-for i in range(500):
+for i in range(50):
     GPIO.output(17, True)
     time.sleep(.05)
     GPIO.output(17, False)
@@ -28,6 +28,12 @@ for i in range(500):
     GPIO.output(23, True)
     time.sleep(.05)
     GPIO.output(23, False) 
+
+# this section turns all the lights off
+GPIO.output(17, False)
+GPIO.output(18, False)
+GPIO.output(22, False)
+GPIO.output(23, False)
 
 # this is supposed to reset the GPIOs
 GPIO.cleanup()
